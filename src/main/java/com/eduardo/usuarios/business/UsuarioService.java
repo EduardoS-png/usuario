@@ -44,7 +44,7 @@ public class UsuarioService {
                 throw new ConflictException("Email já cadastrado!");
             }
         } catch (ConflictException e) {
-            throw new RuntimeException("Email já cadastrado!", e.getCause());
+            throw new ConflictException("Email já cadastrado!", e.getCause());
         }
     }
 
